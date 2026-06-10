@@ -89,22 +89,26 @@ const seasonData = {
     "春": {
         title: "春の埼玉",
         desc: "羊山公園の芝桜や、権現堂堤の桜と菜の花のコントラスト。県内がピンクと黄色に染まります。",
-        img: "https://images.unsplash.com/photo-1621235619177-3e198126759c?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1621235619177-3e198126759c?auto=format&fit=crop&q=80&w=800",
+        link: "pages/details/hitsujiyama.html"
     },
     "夏": {
         title: "夏の埼玉",
         desc: "長瀞のライン下りや、秩父の清流。暑い夏を涼しく彩る水辺の絶景が広がります。",
-        img: "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80&w=800",
+        link: "pages/details/nagatoro.html"
     },
     "秋": {
         title: "秋の埼玉",
         desc: "中津峡や嵐山渓谷の紅葉。燃えるような赤と黄色の世界が山々を包み込みます。",
-        img: "https://images.unsplash.com/photo-1570191831885-3e28420e6592?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1570191831885-3e28420e6592?auto=format&fit=crop&q=80&w=800",
+        link: "pages/spots.html"
     },
     "冬": {
         title: "冬の埼玉",
         desc: "三十槌の氷柱や、秩父夜祭の灯火。寒さの中に幻想的な風景が浮かび上がります。",
-        img: "https://images.unsplash.com/photo-1542360663-8034a30b6910?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1542360663-8034a30b6910?auto=format&fit=crop&q=80&w=800",
+        link: "pages/spots.html"
     }
 };
 
@@ -124,6 +128,9 @@ if (seasonBtns.length > 0 && seasonDisplay) {
                         <h3>${data.title}</h3>
                         <p>${data.desc}</p>
                         <div style="margin-top:20px; height:300px; border-radius:20px; background:url('${data.img}') center/cover;"></div>
+                        <div style="margin-top:20px;">
+                            <a href="${data.link}" class="btn-small">詳細を見る</a>
+                        </div>
                     `;
                     seasonDisplay.style.opacity = 1;
                 }, 300);
