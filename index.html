@@ -62,7 +62,7 @@
         </div>
 
         <div class="story-block">
-            <h2>本当に？</h2>
+            <h2 class="really-text">本当に？</h2>
         </div>
 
     </section>
@@ -155,21 +155,43 @@
 
         <h2>埼玉絶景MAP</h2>
 
-        <div class="map-container" style="max-width: 800px; margin: 0 auto;">
+        <div class="map-container" style="max-width: 800px; margin: 0 auto; position: relative;">
             <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));">
                 <path d="M100,300 L200,200 L400,150 L600,100 L800,150 L900,300 L850,450 L700,550 L500,500 L300,550 L150,450 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
-                <circle cx="250" cy="350" r="12" fill="#2E8B57" class="map-dot">
-                    <title>秩父エリア</title>
-                </circle>
-                <circle cx="500" cy="400" r="10" fill="#2E8B57" class="map-dot">
-                    <title>川越エリア</title>
-                </circle>
-                <circle cx="700" cy="300" r="10" fill="#2E8B57" class="map-dot">
-                    <title>大宮エリア</title>
-                </circle>
-                <text x="250" y="380" font-family="Noto Sans JP" font-size="20" text-anchor="middle" fill="#334155">秩父</text>
-                <text x="500" y="430" font-family="Noto Sans JP" font-size="20" text-anchor="middle" fill="#334155">川越</text>
-                <text x="700" y="330" font-family="Noto Sans JP" font-size="20" text-anchor="middle" fill="#334155">大宮</text>
+
+                <!-- 秩父・長瀞 -->
+                <a href="pages/details/nagatoro.html">
+                    <circle cx="220" cy="320" r="12" fill="#FF4500" class="map-pin">
+                        <animate attributeName="r" values="10;15;10" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="220" y="350" font-family="Noto Sans JP" font-size="18" font-weight="700" text-anchor="middle" fill="#334155">長瀞</text>
+                </a>
+
+                <!-- 秩父・羊山 -->
+                <a href="pages/details/hitsujiyama.html">
+                    <circle cx="250" cy="400" r="12" fill="#FF69B4" class="map-pin">
+                        <animate attributeName="r" values="10;15;10" dur="2.5s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="250" y="430" font-family="Noto Sans JP" font-size="18" font-weight="700" text-anchor="middle" fill="#334155">羊山公園</text>
+                </a>
+
+                <!-- 三峯神社 -->
+                <a href="pages/details/mitsumine.html">
+                    <circle cx="180" cy="450" r="12" fill="#4169E1" class="map-pin">
+                        <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="180" y="480" font-family="Noto Sans JP" font-size="18" font-weight="700" text-anchor="middle" fill="#334155">三峯神社</text>
+                </a>
+
+                <!-- 川越 -->
+                <a href="pages/food.html">
+                    <circle cx="500" cy="420" r="10" fill="#8B4513" class="map-pin"></circle>
+                    <text x="500" y="450" font-family="Noto Sans JP" font-size="18" font-weight="700" text-anchor="middle" fill="#334155">川越(グルメ)</text>
+                </a>
+
+                <!-- 大宮 -->
+                <circle cx="650" cy="380" r="10" fill="#2E8B57" class="map-dot"></circle>
+                <text x="650" y="410" font-family="Noto Sans JP" font-size="18" font-weight="700" text-anchor="middle" fill="#334155">大宮</text>
             </svg>
         </div>
 
@@ -197,19 +219,28 @@
     </section>
 
     <!-- ギャラリー -->
-    <section class="gallery">
+    <section class="gallery-section">
 
         <h2>Photo Gallery</h2>
 
-        <div class="gallery-grid">
+        <div class="gallery-slider">
+            <div class="gallery-track">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600');"></div>
+                <!-- ループ用に複製 -->
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=600');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600');"></div>
+            </div>
+        </div>
 
-            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
-            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
-            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
-            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
-            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
-            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
-
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="pages/gallery.html" class="btn">もっと写真を見る</a>
         </div>
 
     </section>
@@ -219,16 +250,59 @@
 
         <h2>人気絶景ランキング</h2>
 
-        <ol>
+        <div class="ranking-grid">
+            <div class="ranking-card">
+                <div class="rank-num">1</div>
+                <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80&w=800" alt="長瀞岩畳">
+                <div class="rank-info">
+                    <h3>長瀞岩畳</h3>
+                    <p>国指定の名勝・天然記念物。荒川沿いに続く巨大な岩の畳。</p>
+                    <a href="pages/details/nagatoro.html" class="btn-small">詳細を見る</a>
+                </div>
+            </div>
+            <div class="ranking-card">
+                <div class="rank-num">2</div>
+                <img src="https://images.unsplash.com/photo-1590212151175-e58edd96185b?auto=format&fit=crop&q=80&w=800" alt="三峯神社">
+                <div class="rank-info">
+                    <h3>三峯神社</h3>
+                    <p>標高1100m、秩父の山奥に鎮座する「関東最強」とも称されるパワースポット。</p>
+                    <a href="pages/details/mitsumine.html" class="btn-small">詳細を見る</a>
+                </div>
+            </div>
+            <div class="ranking-card">
+                <div class="rank-num">3</div>
+                <img src="https://images.unsplash.com/photo-1621235619177-3e198126759c?auto=format&fit=crop&q=80&w=800" alt="羊山公園">
+                <div class="rank-info">
+                    <h3>羊山公園</h3>
+                    <p>秩父の春を彩る芝桜の丘。約40万株以上の芝桜が咲き誇る。</p>
+                    <a href="pages/details/hitsujiyama.html" class="btn-small">詳細を見る</a>
+                </div>
+            </div>
+        </div>
 
-            <li>長瀞岩畳</li>
-            <li>三峯神社</li>
-            <li>羊山公園</li>
-            <li>美の山公園</li>
-            <li>中津峡</li>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="pages/ranking.html" class="btn">ランキングをもっと見る</a>
+        </div>
 
-        </ol>
+    </section>
 
+    <!-- 追加コンテンツへの導線 -->
+    <section class="more-contents" style="background: #f8fafc; padding: 100px 10%;">
+        <h2 style="text-align: center; margin-bottom: 60px;">もっと埼玉を楽しむ</h2>
+        <div class="spot-grid">
+            <a href="pages/food.html" class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1582722872445-44ad5f73a46e?auto=format&fit=crop&q=80&w=800');">
+                <h3>食べ歩きグルメ</h3>
+                <p>小江戸川越や秩父の人気グルメを紹介</p>
+            </a>
+            <a href="pages/daytrip.html" class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80&w=800');">
+                <h3>日帰りプラン</h3>
+                <p>思い立ったらすぐ行ける絶景トリップ</p>
+            </a>
+            <a href="pages/model-course.html" class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1621235619177-3e198126759c?auto=format&fit=crop&q=80&w=800');">
+                <h3>モデルコース</h3>
+                <p>効率よく巡るおすすめプランをご案内</p>
+            </a>
+        </div>
     </section>
 
     <!-- ラスト -->
@@ -242,7 +316,7 @@
         </p>
 
         <a href="pages/spots.html" class="btn">
-            さらに探す
+            すべてのスポットを見る
         </a>
 
     </section>

@@ -15,6 +15,9 @@ body{
     color:#1e293b;
     overflow-x:hidden;
     line-height:1.8;
+    /* モバイルでの不自然な改行を防ぐ */
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 /* =========================
@@ -211,9 +214,24 @@ section h2{
 }
 
 .story h2{
-    font-size:clamp(2.5rem,6vw,5.5rem);
+    font-size:clamp(1.8rem,5vw,4.5rem);
     color:#1e293b;
     font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    word-break: auto-phrase; /* 対応ブラウザで自然な改行 */
+    line-break: strict;
+}
+
+.really-text {
+    font-size: clamp(2.5rem, 8vw, 6rem) !important;
+    letter-spacing: 0.2em !important;
+}
+
+@media(max-width:768px){
+    .story h2 {
+        letter-spacing: 0.05em;
+    }
 }
 
 
@@ -441,49 +459,116 @@ section h2{
 }
 
 
-.gallery-grid{
-    columns:3;
-    gap:20px;
+.gallery-section {
+    padding: 100px 0;
+    overflow: hidden;
 }
 
-.gallery-item{
-    width:100%;
-    height:300px;
-
-    margin-bottom:20px;
-
-    border-radius:25px;
-
-    background:#e2e8f0;
-
-    overflow:hidden;
-
-    transition:.4s;
+.gallery-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.gallery-item:hover{
-    transform:scale(.98);
+.gallery-track {
+    display: flex;
+    width: calc(320px * 10); /* アイテム幅 * 個数 */
+    animation: scroll 40s linear infinite;
 }
 
-.ranking{
-    background:white;
+.gallery-item {
+    flex-shrink: 0;
+    width: 300px;
+    height: 400px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    opacity: 1 !important; /* スクロールアニメーション用の上書き */
+    transform: none !important;
 }
 
-.ranking ol{
-    max-width:800px;
-    margin:auto;
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-320px * 6)); } /* 最初の6枚分進む */
 }
 
-.ranking li{
-    padding:20px;
+.gallery-slider:hover .gallery-track {
+    animation-play-state: paused;
+}
 
-    margin-bottom:15px;
+.ranking {
+    background: white;
+}
 
-    background:#f8fafc;
+.ranking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    border-radius:20px;
+.ranking-card {
+    position: relative;
+    background: #f8fafc;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
 
-    font-size:1.1rem;
+.ranking-card:hover {
+    transform: translateY(-5px);
+}
+
+.ranking-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.rank-num {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #2E8B57;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.rank-info {
+    padding: 25px;
+}
+
+.rank-info h3 {
+    margin-bottom: 10px;
+}
+
+.rank-info p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #2E8B57;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
 .ranking-container {

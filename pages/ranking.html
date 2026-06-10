@@ -6,43 +6,101 @@
     <title>人気絶景ランキング | 埼玉、想像以上。</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .ranking-full-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        .ranking-full-card {
+            display: flex;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .ranking-full-card:hover { transform: translateY(-5px); }
+        .ranking-full-card img { width: 40%; object-fit: cover; }
+        .ranking-full-info { padding: 40px; flex: 1; position: relative; }
+        .ranking-full-info .rank-num { position: absolute; top: 20px; right: 20px; left: auto; }
+        @media (max-width: 768px) {
+            .ranking-full-card { flex-direction: column; }
+            .ranking-full-card img { width: 100%; height: 250px; }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html" style="text-decoration:none; color:inherit;">埼玉、想像以上。</a></div>
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
             <ul class="nav-links">
-                <li><a href="../index.html">ホーム</a></li>
-                <li><a href="spots.html">絶景一覧</a></li>
+                <li><a href="../index.html#spots">絶景</a></li>
+                <li><a href="ranking.html">ランキング</a></li>
+                <li><a href="gallery.html">ギャラリー</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="ranking-detail">
-        <h2>人気絶景ランキング TOP 5</h2>
-        <div class="ranking-container">
-            <div class="ranking-item">
-                <span class="rank-title">1. 長瀞岩畳</span>
-                <p class="rank-desc">荒川沿いに広がる畳のような岩場。国指定の名勝・天然記念物であり、川下りとセットで楽しむのが定番です。</p>
+    <main class="container" style="padding: 100px 8%;">
+        <h1 style="font-size: 3rem; text-align: center; margin-bottom: 60px;">人気絶景ランキング</h1>
+
+        <div class="ranking-full-grid">
+            <div class="ranking-full-card">
+                <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80&w=800" alt="長瀞岩畳">
+                <div class="ranking-full-info">
+                    <div class="rank-num">1</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 15px;">長瀞岩畳</h2>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">
+                        長瀞の象徴とも言える岩畳。荒川の清流とともに、悠久の時が作り出した自然の造形美を楽しめます。
+                    </p>
+                    <a href="details/nagatoro.html" class="btn-small" style="padding: 12px 30px; font-size: 1rem;">詳しく見る</a>
+                </div>
             </div>
-            <div class="ranking-item">
-                <span class="rank-title">2. 三峯神社</span>
-                <p class="rank-desc">関東屈指のパワースポット。標高1100mの山頂にあり、雲海が発生しやすいことでも知られています。</p>
+
+            <div class="ranking-full-card">
+                <img src="https://images.unsplash.com/photo-1590212151175-e58edd96185b?auto=format&fit=crop&q=80&w=800" alt="三峯神社">
+                <div class="ranking-full-info">
+                    <div class="rank-num">2</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 15px;">三峯神社</h2>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">
+                        天空のパワースポット。秩父の豊かな自然に囲まれ、心身ともにリフレッシュできる特別な場所です。
+                    </p>
+                    <a href="details/mitsumine.html" class="btn-small" style="padding: 12px 30px; font-size: 1rem;">詳しく見る</a>
+                </div>
             </div>
-            <div class="ranking-item">
-                <span class="rank-title">3. 羊山公園（芝桜の丘）</span>
-                <p class="rank-desc">春の埼玉を代表する絶景。約40万株の芝桜が広大な丘を埋め尽くす様は圧巻です。</p>
+
+            <div class="ranking-full-card">
+                <img src="https://images.unsplash.com/photo-1621235619177-3e198126759c?auto=format&fit=crop&q=80&w=800" alt="羊山公園">
+                <div class="ranking-full-info">
+                    <div class="rank-num">3</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 15px;">羊山公園</h2>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">
+                        春の秩父を象徴する景色。色鮮やかな芝桜の絨毯は、訪れる人の心を明るくしてくれます。
+                    </p>
+                    <a href="details/hitsujiyama.html" class="btn-small" style="padding: 12px 30px; font-size: 1rem;">詳しく見る</a>
+                </div>
             </div>
-            <div class="ranking-item">
-                <span class="rank-title">4. 美の山公園</span>
-                <p class="rank-desc">秩父盆地を一望できる絶景スポット。特に早朝の雲海と、夜の街灯りが織りなす夜景は幻想的です。</p>
-            </div>
-            <div class="ranking-item">
-                <span class="rank-title">5. 中津峡</span>
-                <p class="rank-desc">奥秩父にある約10kmの渓谷。断崖絶壁と色鮮やかな紅葉が織りなす景色は、県内屈指の美しさです。</p>
+
+            <div class="ranking-full-card">
+                <img src="https://images.unsplash.com/photo-1542360663-8034a30b6910?auto=format&fit=crop&q=80&w=800" alt="美の山公園">
+                <div class="ranking-full-info">
+                    <div class="rank-num">4</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 15px;">美の山公園</h2>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">
+                        夜景や雲海のスポットとしても有名。秩父盆地を一望できる絶好のロケーションです。
+                    </p>
+                    <a href="../index.html" class="btn-small" style="padding: 12px 30px; font-size: 1rem;">詳細準備中</a>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" class="btn">トップへ戻る</a>
+        </div>
+    </main>
 
     <footer>
         <p>© 2026 埼玉、想像以上。</p>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォトギャラリー | 埼玉、想像以上。</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .gallery-page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+        .gallery-page-item {
+            aspect-ratio: 1 / 1;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery-page-item:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#spots">絶景</a></li>
+                <li><a href="ranking.html">ランキング</a></li>
+                <li><a href="gallery.html">ギャラリー</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding: 100px 8%;">
+        <h1 style="font-size: 3rem; margin-bottom: 40px; text-align: center;">Photo Gallery</h1>
+
+        <div class="gallery-page-grid">
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="gallery-page-item" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800');"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" class="btn">トップへ戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 埼玉、想像以上。</p>
+    </footer>
+</body>
+</html>
