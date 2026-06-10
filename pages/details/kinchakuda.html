@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巾着田 | 埼玉、想像以上。</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: -100px auto 100px;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .detail-content { padding: 40px 20px; margin-top: -50px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#spots">絶景</a></li>
+                <li><a href="../ranking.html">ランキング</a></li>
+                <li><a href="../gallery.html">ギャラリー</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detail-hero">
+        <h1 style="font-size: 4rem; font-weight: 900;">巾着田</h1>
+    </div>
+
+    <main class="detail-content">
+        <h2 style="margin-bottom: 20px; text-align: left; font-size: 2rem;">500万本の曼珠沙華が描く赤い絨毯。</h2>
+        <p>
+            高麗川の蛇行により形成された、巾着のような形の平地「巾着田」。
+            秋になると、500万本もの曼珠沙華（ヒガンバナ）が咲き誇り、辺り一面が真っ赤な絨毯を敷き詰めたような幻想的な光景に包まれます。
+        </p>
+
+        <div class="info-grid">
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">見どころ</h3>
+                <p>日本最大級の曼珠沙華群生地として有名ですが、春には菜の花、夏にはコスモスなど、四季を通じて豊かな自然を楽しむことができます。清流・高麗川での水遊びも人気です。</p>
+            </div>
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">アクセス</h3>
+                <p>西武池袋線「高麗（こま）駅」より徒歩約15分。シーズン中は多くの人で賑わいます。</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../spots.html" class="btn">一覧に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 埼玉、想像以上。</p>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

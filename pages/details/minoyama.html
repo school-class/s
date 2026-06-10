@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美の山公園 | 埼玉、想像以上。</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1542360663-8034a30b6910?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: -100px auto 100px;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .detail-content { padding: 40px 20px; margin-top: -50px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#spots">絶景</a></li>
+                <li><a href="../ranking.html">ランキング</a></li>
+                <li><a href="../gallery.html">ギャラリー</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detail-hero">
+        <h1 style="font-size: 4rem; font-weight: 900;">美の山公園</h1>
+    </div>
+
+    <main class="detail-content">
+        <h2 style="margin-bottom: 20px; text-align: left; font-size: 2rem;">雲海に浮かぶ秩父の街。</h2>
+        <p>
+            標高581.5mの蓑山（みのやま）山頂に広がる美の山公園は、「日本夜景100選」にも選ばれた眺望スポットです。
+            秩父盆地を一望でき、条件が揃えば幻想的な雲海に出会えることも。春の桜、初夏の紫陽花など、花の名所としても知られています。
+        </p>
+
+        <div class="info-grid">
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">見どころ</h3>
+                <p>展望台からは、秩父市街地の夜景と工場の明かりが織りなす「工場夜景」も楽しめます。朝焼けに染まる雲海は、多くの写真家を魅了して止みません。</p>
+            </div>
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">アクセス</h3>
+                <p>秩父鉄道「皆野駅」または「和銅黒谷駅」から徒歩（ハイキングコース）で約90分。車でのアクセスも可能です。</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../spots.html" class="btn">一覧に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 埼玉、想像以上。</p>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

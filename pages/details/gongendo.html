@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>権現堂堤 | 埼玉、想像以上。</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: -100px auto 100px;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .detail-content { padding: 40px 20px; margin-top: -50px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#spots">絶景</a></li>
+                <li><a href="../ranking.html">ランキング</a></li>
+                <li><a href="../gallery.html">ギャラリー</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detail-hero">
+        <h1 style="font-size: 4rem; font-weight: 900;">権現堂堤</h1>
+    </div>
+
+    <main class="detail-content">
+        <h2 style="margin-bottom: 20px; text-align: left; font-size: 2rem;">桜と菜の花、幸せの色彩。</h2>
+        <p>
+            幸手市にある県営権現堂公園。1kmにわたって約1,000本のソメイヨシノが咲き誇る桜堤として全国的に有名です。
+            春には、堤の下に広がる菜の花の黄色と、桜のピンク色のコントラストがどこまでも続き、絵画のような美しさを放ちます。
+        </p>
+
+        <div class="info-grid">
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">見どころ</h3>
+                <p>桜だけでなく、初夏の紫陽花、秋の曼珠沙華、冬の水仙と、四季折々の花が咲く「花の名所」として一年中楽しめます。広大な敷地は散策やピクニックにも最適です。</p>
+            </div>
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">アクセス</h3>
+                <p>東武日光線「幸手駅」よりバス利用。桜のシーズンには多くの観光客が訪れる、埼玉を代表する絶景スポットです。</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../spots.html" class="btn">一覧に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 埼玉、想像以上。</p>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

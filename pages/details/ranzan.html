@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵐山渓谷 | 埼玉、想像以上。</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: -100px auto 100px;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .detail-content { padding: 40px 20px; margin-top: -50px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#spots">絶景</a></li>
+                <li><a href="../ranking.html">ランキング</a></li>
+                <li><a href="../gallery.html">ギャラリー</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detail-hero">
+        <h1 style="font-size: 4rem; font-weight: 900;">嵐山渓谷</h1>
+    </div>
+
+    <main class="detail-content">
+        <h2 style="margin-bottom: 20px; text-align: left; font-size: 2rem;">武蔵国の嵐山。清流が刻んだ芸術。</h2>
+        <p>
+            槻川の清流が岩を削り、周囲の山々と織りなす景観が京都の嵐山に似ていることから名付けられた「嵐山渓谷」。
+            県内屈指の景勝地として知られ、四季折々の美しい表情を見せてくれます。
+        </p>
+
+        <div class="info-grid">
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">見どころ</h3>
+                <p>特に紅葉の時期は美しく、川面に映る赤や黄色の葉が幻想的な風景を作り出します。夏はバーベキューや川遊びを楽しむ人々で賑わい、大自然を身近に感じることができます。</p>
+            </div>
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">アクセス</h3>
+                <p>東武東上線「武蔵嵐山駅」より徒歩約40分（またはバス利用）。都心から1時間ほどでアクセスできる癒やしのスポットです。</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../spots.html" class="btn">一覧に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 埼玉、想像以上。</p>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

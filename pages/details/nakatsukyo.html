@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中津峡 | 埼玉、想像以上。</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1570191831885-3e28420e6592?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: -100px auto 100px;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .detail-content { padding: 40px 20px; margin-top: -50px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">埼玉、想像以上。</a></div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#spots">絶景</a></li>
+                <li><a href="../ranking.html">ランキング</a></li>
+                <li><a href="../gallery.html">ギャラリー</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detail-hero">
+        <h1 style="font-size: 4rem; font-weight: 900;">中津峡</h1>
+    </div>
+
+    <main class="detail-content">
+        <h2 style="margin-bottom: 20px; text-align: left; font-size: 2rem;">奥秩父を燃やす紅葉の渓谷。</h2>
+        <p>
+            奥秩父を代表する紅葉の名所、中津峡。約10kmにわたって高さ100mにも及ぶ断崖絶壁が続き、そのダイナミックな景観は見る者を圧倒します。
+            秋になると、モミジやカエデが色づき、渓谷全体が赤や黄色に染まる様子はまさに絶景です。
+        </p>
+
+        <div class="info-grid">
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">見どころ</h3>
+                <p>中津川の清流と紅葉のコントラストが美しく、散策路を歩きながら四季折々の表情を楽しむことができます。特に「持瀬（もちがせ）」周辺の景観が有名です。</p>
+            </div>
+            <div>
+                <h3 style="border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 15px;">アクセス</h3>
+                <p>秩父鉄道「三峰口駅」からバスで約50分。秘境感あふれるドライブコースとしても人気です。</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../spots.html" class="btn">一覧に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 埼玉、想像以上。</p>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
