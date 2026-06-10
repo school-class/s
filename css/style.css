@@ -1,4 +1,6 @@
-
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
@@ -12,20 +14,25 @@ html{
 
 body{
     font-family:'Noto Sans JP',sans-serif;
-    background:#0b0b0b;
-    color:white;
+    background:#f8fafc;
+    color:#1e293b;
     overflow-x:hidden;
+    line-height:1.8;
 }
 
-
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:fixed;
-    width:100%;
     top:0;
+    left:0;
+    width:100%;
     z-index:999;
-    backdrop-filter:blur(15px);
-    background:rgba(0,0,0,.3);
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.75);
+    border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 .navbar{
@@ -36,9 +43,9 @@ header{
 }
 
 .logo{
-    font-size:1.4rem;
+    font-size:1.5rem;
     font-weight:900;
-    letter-spacing:2px;
+    color:#0f172a;
 }
 
 .nav-links{
@@ -48,63 +55,58 @@ header{
 }
 
 .nav-links a{
-    color:white;
     text-decoration:none;
+    color:#334155;
+    font-weight:600;
     transition:.3s;
 }
 
 .nav-links a:hover{
-    opacity:.7;
+    color:#2E8B57;
 }
 
-
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    height:100vh;
     position:relative;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.5),
-        rgba(0,0,0,.6)
-    ),
-    url("../assets/images/hero.jpg");
-
-    background-size:cover;
-    background-position:center;
-
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
+    overflow:hidden;
+}
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.15),
+        rgba(255,255,255,.55)
+    );
 }
 
 .hero-content{
     position:relative;
     z-index:5;
-
-    width:90%;
-    max-width:1200px;
-
-    margin:0 auto;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
 }
 
 .hero h1{
-    font-size:clamp(3.5rem,10vw,8rem);
+    font-size:clamp(4rem,9vw,8rem);
     font-weight:900;
-
     color:white;
-
-    white-space:nowrap;
-
-    line-height:1.1;
-
-    letter-spacing:-0.04em;
 
     text-shadow:
     0 10px 30px rgba(0,0,0,.25);
@@ -112,12 +114,8 @@ header{
 
 .hero p{
     margin-top:20px;
-
-    font-size:clamp(1rem,2vw,1.4rem);
-
+    font-size:1.3rem;
     color:white;
-
-    white-space:nowrap;
 
     text-shadow:
     0 5px 15px rgba(0,0,0,.25);
@@ -125,74 +123,61 @@ header{
 
 .btn{
     display:inline-block;
-    padding:15px 40px;
+    margin-top:35px;
+    padding:16px 40px;
 
     background:white;
-    color:black;
+    color:#0f172a;
 
     border-radius:999px;
 
     text-decoration:none;
     font-weight:700;
 
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.1);
+
     transition:.4s;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
-
-
 
 .scroll-indicator{
     position:absolute;
-    bottom:40px;
+    bottom:30px;
     left:50%;
     transform:translateX(-50%);
-
-    animation:float 2s infinite;
+    color:white;
+    font-weight:700;
 }
 
-@keyframes float{
-
-    0%{
-        transform:
-        translateX(-50%)
-        translateY(0);
-    }
-
-    50%{
-        transform:
-        translateX(-50%)
-        translateY(10px);
-    }
-
-    100%{
-        transform:
-        translateX(-50%)
-        translateY(0);
-    }
-
-}
-
+/* =========================
+   SECTION
+========================= */
 
 section{
     padding:120px 10%;
 }
 
 section h2{
-    font-size:3rem;
-    margin-bottom:60px;
+    text-align:center;
+    font-size:clamp(2rem,5vw,4rem);
+    margin-bottom:70px;
+    color:#0f172a;
 }
 
-
+/* =========================
+   STORY
+========================= */
 
 .story{
-    text-align:center;
+    background:white;
 }
 
 .story-block{
-    min-height:50vh;
+    min-height:40vh;
 
     display:flex;
     justify-content:center;
@@ -200,30 +185,38 @@ section h2{
 }
 
 .story h2{
-    font-size:clamp(2rem,5vw,5rem);
-    opacity:.9;
+    font-size:clamp(2.5rem,7vw,5rem);
+    color:#1e293b;
 }
 
+/* =========================
+   STATS
+========================= */
 
+.stats{
+    background:#f1f5f9;
+}
 
 .stats-grid{
     display:grid;
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
-
     gap:30px;
 }
 
 .stat-card{
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.7);
 
-    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
 
-    padding:40px;
+    border-radius:30px;
 
-    border-radius:25px;
+    padding:45px;
 
-    backdrop-filter:blur(15px);
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
 
     transition:.4s;
 }
@@ -234,49 +227,116 @@ section h2{
 
 .stat-card h3{
     font-size:4rem;
-    margin-bottom:10px;
+    color:#2E8B57;
 }
 
+.stat-card p{
+    color:#64748b;
+}
 
+/* =========================
+   SPOTS
+========================= */
 
 .spot-grid{
     display:grid;
-
     grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
+    repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
 .spot-card{
-    height:350px;
+    background:white;
 
     border-radius:30px;
 
-    background:#151515;
+    overflow:hidden;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:end;
+    min-height:320px;
 
     padding:30px;
 
-    transition:.4s;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
 
-    cursor:pointer;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.07);
+
+    transition:.4s;
 }
 
 .spot-card:hover{
-    transform:scale(1.05);
+    transform:translateY(-10px);
 }
 
 .spot-card span{
     font-size:3rem;
 }
 
+.spot-card h3{
+    margin-top:10px;
+    color:#0f172a;
+}
+
+.spot-card p{
+    color:#64748b;
+}
+
+/* =========================
+   SEASONS
+========================= */
+
+.seasons{
+    background:#f8fafc;
+}
+
+.season-tabs{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.season-tabs button{
+    border:none;
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+}
+
+.season-display{
+    background:white;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map-section{
+    background:white;
+}
 
 .map-placeholder{
-
     height:500px;
 
     border-radius:30px;
@@ -284,8 +344,8 @@ section h2{
     background:
     linear-gradient(
         135deg,
-        #1e1e1e,
-        #101010
+        #dbeafe,
+        #ecfeff
     );
 
     display:flex;
@@ -293,26 +353,55 @@ section h2{
     align-items:center;
 
     font-size:2rem;
+    font-weight:700;
+
+    color:#0369a1;
 }
 
+/* =========================
+   QUIZ
+========================= */
+
+.quiz{
+    text-align:center;
+    background:#f1f5f9;
+}
+
+.quiz-btn{
+    border:none;
+    padding:18px 40px;
+
+    border-radius:999px;
+
+    background:#2E8B57;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1rem;
+    font-weight:700;
+}
+
+/* =========================
+   GALLERY
+========================= */
 
 .gallery-grid{
-
     columns:3;
     gap:20px;
 }
 
 .gallery-item{
-
     width:100%;
-
     height:300px;
 
     margin-bottom:20px;
 
-    border-radius:20px;
+    border-radius:25px;
 
-    background:#222;
+    background:#e2e8f0;
+
+    overflow:hidden;
 
     transition:.4s;
 }
@@ -321,26 +410,99 @@ section h2{
     transform:scale(.98);
 }
 
+/* =========================
+   RANKING
+========================= */
+
+.ranking{
+    background:white;
+}
+
+.ranking ol{
+    max-width:800px;
+    margin:auto;
+}
+
+.ranking li{
+    padding:20px;
+
+    margin-bottom:15px;
+
+    background:#f8fafc;
+
+    border-radius:20px;
+
+    font-size:1.1rem;
+}
+
+/* =========================
+   ENDING
+========================= */
 
 .ending{
-
     text-align:center;
 
     min-height:70vh;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
     align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #87CEEB,
+        #dbeafe
+    );
 }
 
 .ending h2{
-    font-size:6rem;
+    font-size:clamp(3rem,8vw,6rem);
+    color:white;
+
+    text-shadow:
+    0 10px 30px rgba(0,0,0,.15);
 }
 
+.ending p{
+    font-size:1.2rem;
+    margin:20px 0 30px;
+    color:white;
+}
 
+/* =========================
+   ANIMATION
+========================= */
+
+.story-block,
+.stat-card,
+.spot-card,
+.gallery-item{
+    opacity:0;
+    transform:translateY(60px);
+    transition:.8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:white;
+    color:#64748b;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
@@ -354,11 +516,6 @@ section h2{
 
     .hero h1{
         font-size:3rem;
-        white-space:normal;
-    }
-
-    .hero p{
-        white-space:normal;
     }
 
     section{
