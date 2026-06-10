@@ -100,28 +100,24 @@
 
         <div class="spot-grid">
 
-            <div class="spot-card spring">
-                <img src="assets/images/spring-hitsujiyama.jpg" alt="羊山公園">
+            <div class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1621235619177-3e198126759c?auto=format&fit=crop&q=80&w=800');">
                 <h3>羊山公園</h3>
-                <p>芝桜の絶景</p>
+                <p>秩父を彩る40万株の芝桜の絨毯。</p>
             </div>
 
-            <div class="spot-card summer">
-                <img src="assets/images/summer-nagatoro.jpg" alt="長瀞">
+            <div class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80&w=800');">
                 <h3>長瀞</h3>
-                <p>渓谷の絶景</p>
+                <p>国指定名勝。結晶片岩が続く「岩畳」。</p>
             </div>
 
-            <div class="spot-card autumn">
-                <img src="assets/images/autumn-nakatsu.jpg" alt="中津峡">
+            <div class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1570191831885-3e28420e6592?auto=format&fit=crop&q=80&w=800');">
                 <h3>中津峡</h3>
-                <p>紅葉の絶景</p>
+                <p>奥秩父屈指の紅葉の名所。断崖絶壁が続く。</p>
             </div>
 
-            <div class="spot-card winter">
-                <span>❄️</span>
-                <h3>三十槌の氷柱</h3>
-                <p>冬だけの幻想世界</p>
+            <div class="spot-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542360663-8034a30b6910?auto=format&fit=crop&q=80&w=800');">
+                <h3>美の山公園</h3>
+                <p>秩父の街並みを包み込む、輝く雲海。</p>
             </div>
 
         </div>
@@ -159,24 +155,44 @@
 
         <h2>埼玉絶景MAP</h2>
 
-        <div class="map-container">
-
-            <div class="map-placeholder">
-                埼玉県マップ（後でSVG化）
-            </div>
-
+        <div class="map-container" style="max-width: 800px; margin: 0 auto;">
+            <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));">
+                <path d="M100,300 L200,200 L400,150 L600,100 L800,150 L900,300 L850,450 L700,550 L500,500 L300,550 L150,450 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+                <circle cx="250" cy="350" r="12" fill="#2E8B57" class="map-dot">
+                    <title>秩父エリア</title>
+                </circle>
+                <circle cx="500" cy="400" r="10" fill="#2E8B57" class="map-dot">
+                    <title>川越エリア</title>
+                </circle>
+                <circle cx="700" cy="300" r="10" fill="#2E8B57" class="map-dot">
+                    <title>大宮エリア</title>
+                </circle>
+                <text x="250" y="380" font-family="Noto Sans JP" font-size="20" text-anchor="middle" fill="#334155">秩父</text>
+                <text x="500" y="430" font-family="Noto Sans JP" font-size="20" text-anchor="middle" fill="#334155">川越</text>
+                <text x="700" y="330" font-family="Noto Sans JP" font-size="20" text-anchor="middle" fill="#334155">大宮</text>
+            </svg>
         </div>
 
     </section>
 
     <!-- 診断 -->
-    <section class="quiz">
+    <section id="quiz" class="quiz">
 
         <h2>あなたにおすすめの絶景は？</h2>
 
-        <button class="quiz-btn">
-            診断を始める
-        </button>
+        <div class="quiz-container">
+            <div id="quiz-question">
+                <p class="question-text">あなたの今の気分はどちらですか？</p>
+                <div class="quiz-options">
+                    <button class="quiz-opt-btn" data-choice="1">自然の中でリフレッシュしたい</button>
+                    <button class="quiz-opt-btn" data-choice="2">歴史や文化に触れたい</button>
+                </div>
+            </div>
+            <div id="quiz-result" class="quiz-result-box hidden">
+                <p id="result-text"></p>
+                <button class="btn reset-quiz">もう一度診断する</button>
+            </div>
+        </div>
 
     </section>
 
@@ -187,12 +203,12 @@
 
         <div class="gallery-grid">
 
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
+            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
+            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
+            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
+            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
+            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
+            <div class="gallery-item" style="background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600'); background-size: cover;"></div>
 
         </div>
 
