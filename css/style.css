@@ -101,12 +101,28 @@ header{
 .hero-content{
     position:relative;
     z-index:5;
+
+    width:90%;
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .hero h1{
-    font-size:clamp(4rem,9vw,8rem);
+    font-size:clamp(3.5rem,10vw,8rem);
     font-weight:900;
+
     color:white;
+
+    white-space:nowrap;
+
+    line-height:1.1;
+
+    letter-spacing:-0.04em;
 
     text-shadow:
     0 10px 30px rgba(0,0,0,.25);
@@ -114,8 +130,12 @@ header{
 
 .hero p{
     margin-top:20px;
-    font-size:1.3rem;
+
+    font-size:clamp(1rem,2vw,1.4rem);
+
     color:white;
+
+    white-space:nowrap;
 
     text-shadow:
     0 5px 15px rgba(0,0,0,.25);
@@ -500,10 +520,6 @@ footer{
     color:#64748b;
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:768px){
 
     .nav-links{
@@ -516,6 +532,11 @@ footer{
 
     .hero h1{
         font-size:3rem;
+        white-space:normal;
+    }
+
+    .hero p{
+        white-space:normal;
     }
 
     section{
