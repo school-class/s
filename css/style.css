@@ -16,7 +16,7 @@ body{
     overflow-x:hidden;
     line-height:1.8;
     /* モバイルでの不自然な改行を防ぐ */
-    word-break: keep-all;
+    word-break: normal;
     overflow-wrap: break-word;
 }
 
@@ -129,8 +129,6 @@ header{
 
     color:white;
 
-    white-space:nowrap;
-
     line-height:1.1;
 
     letter-spacing:-0.04em;
@@ -145,8 +143,6 @@ header{
     font-size:clamp(1rem,2vw,1.4rem);
 
     color:white;
-
-    white-space:nowrap;
 
     text-shadow:
     0 5px 15px rgba(0,0,0,.25);
