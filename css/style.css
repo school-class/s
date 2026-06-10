@@ -81,18 +81,46 @@ header{
 }
 
 .hero-content{
-    z-index:10;
+    position:relative;
+    z-index:5;
+
+    width:90%;
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .hero h1{
-    font-size:clamp(3rem,8vw,7rem);
+    font-size:clamp(3.5rem,10vw,8rem);
     font-weight:900;
-    margin-bottom:20px;
+
+    color:white;
+
+    white-space:nowrap;
+
+    line-height:1.1;
+
+    letter-spacing:-0.04em;
+
+    text-shadow:
+    0 10px 30px rgba(0,0,0,.25);
 }
 
 .hero p{
-    font-size:1.2rem;
-    margin-bottom:30px;
+    margin-top:20px;
+
+    font-size:clamp(1rem,2vw,1.4rem);
+
+    color:white;
+
+    white-space:nowrap;
+
+    text-shadow:
+    0 5px 15px rgba(0,0,0,.25);
 }
 
 .btn{
@@ -326,10 +354,15 @@ section h2{
 
     .hero h1{
         font-size:3rem;
+        white-space:normal;
     }
 
-    section h2{
-        font-size:2rem;
+    .hero p{
+        white-space:normal;
+    }
+
+    section{
+        padding:90px 7%;
     }
 
 }
